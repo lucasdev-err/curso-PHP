@@ -10,7 +10,7 @@
 
 <body>
     <?php
-    $sMin = 1380;
+    $sMin = 1_412.00;
     $sal = $_GET['salario'] ?? $sMin;
     ?>
     <main>
@@ -19,7 +19,7 @@
 
             <label for="salario">Salário(R$)</label>
             <input type="number" name="salario" id="salario" step="0,01" value="<?= $sal ?>">
-            <p>Considerando o salário mínimo de <strong>R$1.380,00</strong></p>
+            <p>Considerando o salário mínimo de <strong>R$<?= number_format($sMin, "2", ",", ".") ?></strong></p>
             <input type="submit" value="Calcular">
         </form>
 

@@ -35,10 +35,16 @@
         } else {
             $resto = $dividendo % $divisor;
             $quo = intdiv($dividendo, $divisor);
-            echo "<p> O dividendo é <strong>$dividendo</strong></br>
-        O divisor é <strong>$divisor</strong></br>
-        O resto é <strong>$resto</strong></br>
-        E o quociente é <strong>$quo</strong></p>";
+            echo "<table class='divisao'>";
+            echo "<tr>";
+            echo "<td>$dividendo</td>";
+            echo "<td>$divisor</td>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<td>$resto</td>";
+            echo "<td>$quo</td>";
+            echo "</tr>";
+            echo "</table>";
         }
         ?>
     </section>

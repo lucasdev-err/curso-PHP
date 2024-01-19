@@ -30,8 +30,10 @@
         <h2>Resultado do Reajuste</h2>
         <?php
         $reajuste = $preco + ($preco * ($perc / 100));
-        $cotation = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
-        echo "<p>O produto que custava " . numfmt_format_currency($cotation, $preco, "BRL") . ", com <strong>$perc% de aumento</strong> vai passar a custar <strong>" . numfmt_format_currency($cotation, $reajuste, "BRL") . "</strong> a partir de agora.</p>";
+
+        echo "<p>O produto que custava " . number_format($preco, "2", ",", ".") . ", com <strong>$perc% de aumento</strong> vai passar a custar <strong>" . number_format($reajuste, "2", ",", ".") . "</strong> a partir de agora.</p>";
+        // $cotation = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+        // echo "<p>O produto que custava " . numfmt_format_currency($cotation, $preco, "BRL") . ", com <strong>$perc% de aumento</strong> vai passar a custar <strong>" . numfmt_format_currency($cotation, $reajuste, "BRL") . "</strong> a partir de agora.</p>";
         ?>
     </section>
 
